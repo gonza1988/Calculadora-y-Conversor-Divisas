@@ -121,6 +121,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         panel.add(botonDividir, gridBagConstraints);
 
         botonBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/edit_delete_delete_1189.png"))); // NOI18N
+        botonBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBorrarActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 2;
@@ -446,10 +451,9 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_conversorDivisasActionPerformed
 
     private void botonCambiarSignoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCambiarSignoActionPerformed
-        if(cadenaNumeros.charAt(0) != '-') {
-            cadenaNumeros = "-"+ cadenaNumeros;
-        }
-        else {
+        if (cadenaNumeros.charAt(0) != '-') {
+            cadenaNumeros = "-" + cadenaNumeros;
+        } else {
             cadenaNumeros = cadenaNumeros.substring(1, cadenaNumeros.length());
         }
         etiquetaNumeros.setText(cadenaNumeros);
@@ -563,6 +567,15 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_botonPuntoActionPerformed
+
+    private void botonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBorrarActionPerformed
+        int tamaño = cadenaNumeros.length();
+
+        if (tamaño > 0) {
+            cadenaNumeros = cadenaNumeros.substring(0, cadenaNumeros.length() - 1);
+            etiquetaNumeros.setText(cadenaNumeros);
+        }
+    }//GEN-LAST:event_botonBorrarActionPerformed
 
     public static void main(String args[]) {
 
