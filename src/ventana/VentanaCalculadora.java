@@ -93,6 +93,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         botonC.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         botonC.setForeground(new java.awt.Color(0, 0, 0));
         botonC.setText("C");
+        botonC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -103,6 +108,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         panel.add(botonC, gridBagConstraints);
 
         botonRaizCuadrada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/root_square_icon_195511.png"))); // NOI18N
+        botonRaizCuadrada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRaizCuadradaActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -112,6 +122,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         panel.add(botonRaizCuadrada, gridBagConstraints);
 
         botonDividir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/division_icon_138673.png"))); // NOI18N
+        botonDividir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonDividirActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
@@ -185,6 +200,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         botonMultiplicar.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         botonMultiplicar.setForeground(new java.awt.Color(0, 0, 0));
         botonMultiplicar.setText("X");
+        botonMultiplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonMultiplicarActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
@@ -244,6 +264,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         botonRestar.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         botonRestar.setForeground(new java.awt.Color(0, 0, 0));
         botonRestar.setText("-");
+        botonRestar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRestarActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 4;
@@ -547,6 +572,24 @@ public class VentanaCalculadora extends javax.swing.JFrame {
             etiquetaNumeros.setText(String.format("%.2f", resultado));
             cadenaNumeros = String.valueOf(resultado);
             operacion = "nula";
+        } else if (operacion.equals("restar")) {
+            numero2 = Double.parseDouble(cadenaNumeros);
+            resultado = numero1 - numero2;
+            etiquetaNumeros.setText(String.format("%.2f", resultado));
+            cadenaNumeros = String.valueOf(resultado);
+            operacion = "nula";
+        } else if (operacion.equals("multiplicar")) {
+            numero2 = Double.parseDouble(cadenaNumeros);
+            resultado = numero1 * numero2;
+            etiquetaNumeros.setText(String.format("%.2f", resultado));
+            cadenaNumeros = String.valueOf(resultado);
+            operacion = "nula";
+        } else if (operacion.equals("dividir")) {
+            numero2 = Double.parseDouble(cadenaNumeros);
+            resultado = numero1 / numero2;
+            etiquetaNumeros.setText(String.format("%.2f", resultado));
+            cadenaNumeros = String.valueOf(resultado);
+            operacion = "nula";
         }
 
         etiquetaMuestra.setText("");
@@ -576,6 +619,66 @@ public class VentanaCalculadora extends javax.swing.JFrame {
             etiquetaNumeros.setText(cadenaNumeros);
         }
     }//GEN-LAST:event_botonBorrarActionPerformed
+
+    private void botonRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRestarActionPerformed
+
+        if (activado == true) {
+            numero1 = Double.parseDouble(cadenaNumeros);
+            etiquetaMuestra.setText(cadenaNumeros + " - ");
+            cadenaNumeros = "";
+            operacion = "restar";
+
+            activado = false;
+            punto = true;
+        }
+    }//GEN-LAST:event_botonRestarActionPerformed
+
+    private void botonMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMultiplicarActionPerformed
+
+        if (activado == true) {
+            numero1 = Double.parseDouble(cadenaNumeros);
+            etiquetaMuestra.setText(cadenaNumeros + " x ");
+            cadenaNumeros = "";
+            operacion = "multiplicar";
+
+            activado = false;
+            punto = true;
+        }
+    }//GEN-LAST:event_botonMultiplicarActionPerformed
+
+    private void botonDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDividirActionPerformed
+
+        if (activado == true) {
+            numero1 = Double.parseDouble(cadenaNumeros);
+            etiquetaMuestra.setText(cadenaNumeros + " / ");
+            cadenaNumeros = "";
+            operacion = "dividir";
+
+            activado = false;
+            punto = true;
+        }
+    }//GEN-LAST:event_botonDividirActionPerformed
+
+    private void botonRaizCuadradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRaizCuadradaActionPerformed
+
+        numero1 = Double.parseDouble(cadenaNumeros);
+        etiquetaMuestra.setText("sqrt(" + cadenaNumeros + ")");
+        resultado = Math.sqrt(numero1);
+        etiquetaNumeros.setText(String.format("%.2f", resultado));
+        cadenaNumeros = String.valueOf(resultado);
+
+        punto = true;
+
+    }//GEN-LAST:event_botonRaizCuadradaActionPerformed
+
+    private void botonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCActionPerformed
+        etiquetaMuestra.setText("");
+        etiquetaNumeros.setText("0");
+        cadenaNumeros = "";
+        operacion = "nula";
+        activado = true;
+        punto = true;
+    }//GEN-LAST:event_botonCActionPerformed
 
     public static void main(String args[]) {
 
