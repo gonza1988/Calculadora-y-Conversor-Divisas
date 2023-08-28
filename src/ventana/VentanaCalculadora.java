@@ -485,62 +485,102 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonCambiarSignoActionPerformed
 
     private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
-        cadenaNumeros += "1";
+        if (etiquetaNumeros.getText().equals("0")) {
+            cadenaNumeros = "1";
+        } else {
+            cadenaNumeros += "1";
+        }
         etiquetaNumeros.setText(cadenaNumeros);
         activado = true;
     }//GEN-LAST:event_boton1ActionPerformed
 
     private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
-        cadenaNumeros += "2";
+        if (etiquetaNumeros.getText().equals("0")) {
+            cadenaNumeros = "2";
+        } else {
+            cadenaNumeros += "2";
+        }
         etiquetaNumeros.setText(cadenaNumeros);
         activado = true;
     }//GEN-LAST:event_boton2ActionPerformed
 
     private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
-        cadenaNumeros += "3";
+        if (etiquetaNumeros.getText().equals("0")) {
+            cadenaNumeros = "3";
+        } else {
+            cadenaNumeros += "3";
+        }
         etiquetaNumeros.setText(cadenaNumeros);
         activado = true;
     }//GEN-LAST:event_boton3ActionPerformed
 
     private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
-        cadenaNumeros += "4";
+        if (etiquetaNumeros.getText().equals("0")) {
+            cadenaNumeros = "4";
+        } else {
+            cadenaNumeros += "4";
+        }
         etiquetaNumeros.setText(cadenaNumeros);
         activado = true;
     }//GEN-LAST:event_boton4ActionPerformed
 
     private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
-        cadenaNumeros += "5";
+        if (etiquetaNumeros.getText().equals("0")) {
+            cadenaNumeros = "5";
+        } else {
+            cadenaNumeros += "5";
+        }
         etiquetaNumeros.setText(cadenaNumeros);
         activado = true;
     }//GEN-LAST:event_boton5ActionPerformed
 
     private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
-        cadenaNumeros += "6";
+        if (etiquetaNumeros.getText().equals("0")) {
+            cadenaNumeros = "6";
+        } else {
+            cadenaNumeros += "6";
+        }
         etiquetaNumeros.setText(cadenaNumeros);
         activado = true;
     }//GEN-LAST:event_boton6ActionPerformed
 
     private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
-        cadenaNumeros += "7";
+        if (etiquetaNumeros.getText().equals("0")) {
+            cadenaNumeros = "7";
+        } else {
+            cadenaNumeros += "7";
+        }
         etiquetaNumeros.setText(cadenaNumeros);
         activado = true;
     }//GEN-LAST:event_boton7ActionPerformed
 
     private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
-        cadenaNumeros += "8";
+        if (etiquetaNumeros.getText().equals("0")) {
+            cadenaNumeros = "8";
+        } else {
+            cadenaNumeros += "8";
+        }
         etiquetaNumeros.setText(cadenaNumeros);
         activado = true;
     }//GEN-LAST:event_boton8ActionPerformed
 
     private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
-        cadenaNumeros += "9";
+        if (etiquetaNumeros.getText().equals("0")) {
+            cadenaNumeros = "9";
+        } else {
+            cadenaNumeros += "9";
+        }
         etiquetaNumeros.setText(cadenaNumeros);
         activado = true;
     }//GEN-LAST:event_boton9ActionPerformed
 
     private void boton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton0ActionPerformed
         if (cadenaNumeros != "") {
-            cadenaNumeros += "0";
+            if (etiquetaNumeros.getText().equals("0")) {
+                cadenaNumeros = "0";
+            } else {
+                cadenaNumeros += "0";
+            }
             etiquetaNumeros.setText(cadenaNumeros);
             activado = true;
         }
@@ -615,7 +655,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         int tamaño = cadenaNumeros.length();
 
         if (tamaño > 0) {
-            cadenaNumeros = cadenaNumeros.substring(0, cadenaNumeros.length() - 1);
+            if (tamaño == 1) {
+                cadenaNumeros = "0";
+            } else {
+                cadenaNumeros = cadenaNumeros.substring(0, cadenaNumeros.length() - 1);
+            }
             etiquetaNumeros.setText(cadenaNumeros);
         }
     }//GEN-LAST:event_botonBorrarActionPerformed
