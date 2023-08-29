@@ -30,7 +30,28 @@ public class VentanaDivisas extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
+        panel = new javax.swing.JPanel();
+        etiquetaDivisa1 = new javax.swing.JLabel();
+        etiquetaCambio1 = new javax.swing.JLabel();
+        comboDivisas1 = new javax.swing.JComboBox<>();
+        etiquetaDivisa2 = new javax.swing.JLabel();
+        etiquetaCambio2 = new javax.swing.JLabel();
+        comboDivisas2 = new javax.swing.JComboBox<>();
+        botonC = new javax.swing.JButton();
+        botonBorrar = new javax.swing.JButton();
+        boton7 = new javax.swing.JButton();
+        boton8 = new javax.swing.JButton();
+        boton9 = new javax.swing.JButton();
+        boton4 = new javax.swing.JButton();
+        boton5 = new javax.swing.JButton();
+        boton6 = new javax.swing.JButton();
+        boton1 = new javax.swing.JButton();
+        boton2 = new javax.swing.JButton();
+        boton3 = new javax.swing.JButton();
+        boton0 = new javax.swing.JButton();
+        botonPunto = new javax.swing.JButton();
         barraMenu = new javax.swing.JMenuBar();
         menu = new javax.swing.JMenu();
         calculadoraEstandar = new javax.swing.JMenuItem();
@@ -40,7 +61,211 @@ public class VentanaDivisas extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Conversor de Divisas");
-        setPreferredSize(new java.awt.Dimension(300, 450));
+
+        panel.setLayout(new java.awt.GridBagLayout());
+
+        etiquetaDivisa1.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        etiquetaDivisa1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        etiquetaDivisa1.setText("$");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(15, 15, 0, 5);
+        panel.add(etiquetaDivisa1, gridBagConstraints);
+
+        etiquetaCambio1.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        etiquetaCambio1.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(15, 0, 0, 0);
+        panel.add(etiquetaCambio1, gridBagConstraints);
+
+        comboDivisas1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        comboDivisas1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 10);
+        panel.add(comboDivisas1, gridBagConstraints);
+
+        etiquetaDivisa2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        etiquetaDivisa2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        etiquetaDivisa2.setText("$");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(15, 15, 0, 5);
+        panel.add(etiquetaDivisa2, gridBagConstraints);
+
+        etiquetaCambio2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        etiquetaCambio2.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(15, 0, 0, 0);
+        panel.add(etiquetaCambio2, gridBagConstraints);
+
+        comboDivisas2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        comboDivisas2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 10);
+        panel.add(comboDivisas2, gridBagConstraints);
+
+        botonC.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        botonC.setForeground(new java.awt.Color(0, 0, 0));
+        botonC.setText("C");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(15, 0, 0, 0);
+        panel.add(botonC, gridBagConstraints);
+
+        botonBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/edit_delete_delete_1189.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(15, 0, 0, 0);
+        panel.add(botonBorrar, gridBagConstraints);
+
+        boton7.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        boton7.setText("7");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton7, gridBagConstraints);
+
+        boton8.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        boton8.setText("8");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton8, gridBagConstraints);
+
+        boton9.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        boton9.setText("9");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton9, gridBagConstraints);
+
+        boton4.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        boton4.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton4, gridBagConstraints);
+
+        boton5.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        boton5.setText("5");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton5, gridBagConstraints);
+
+        boton6.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        boton6.setText("6");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton6, gridBagConstraints);
+
+        boton1.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        boton1.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton1, gridBagConstraints);
+
+        boton2.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        boton2.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton2, gridBagConstraints);
+
+        boton3.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        boton3.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton3, gridBagConstraints);
+
+        boton0.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        boton0.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton0, gridBagConstraints);
+
+        botonPunto.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        botonPunto.setText(".");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(botonPunto, gridBagConstraints);
 
         menu.setText("Usos");
         menu.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -79,11 +304,11 @@ public class VentanaDivisas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 425, Short.MAX_VALUE)
+            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -149,10 +374,30 @@ public class VentanaDivisas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar barraMenu;
+    private javax.swing.JButton boton0;
+    private javax.swing.JButton boton1;
+    private javax.swing.JButton boton2;
+    private javax.swing.JButton boton3;
+    private javax.swing.JButton boton4;
+    private javax.swing.JButton boton5;
+    private javax.swing.JButton boton6;
+    private javax.swing.JButton boton7;
+    private javax.swing.JButton boton8;
+    private javax.swing.JButton boton9;
+    private javax.swing.JButton botonBorrar;
+    private javax.swing.JButton botonC;
+    private javax.swing.JButton botonPunto;
     private javax.swing.JMenuItem calculadoraEstandar;
+    private javax.swing.JComboBox<String> comboDivisas1;
+    private javax.swing.JComboBox<String> comboDivisas2;
     private javax.swing.JMenuItem conversorDivisas;
+    private javax.swing.JLabel etiquetaCambio1;
+    private javax.swing.JLabel etiquetaCambio2;
+    private javax.swing.JLabel etiquetaDivisa1;
+    private javax.swing.JLabel etiquetaDivisa2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JMenu menu;
+    private javax.swing.JPanel panel;
     private javax.swing.JMenuItem salir;
     // End of variables declaration//GEN-END:variables
 }
