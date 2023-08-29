@@ -1,24 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package ventana;
 
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-/**
- *
- * @author GONZALO
- */
 public class VentanaDivisas extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VentanaDivisas
-     */
+    private String divisa1 = "";
+    private String divisa2 = "";
+    private String cantidad = "";
+
     public VentanaDivisas() {
         initComponents();
-        setSize(300,450);
+        setSize(300, 450);
         setLocationRelativeTo(null);
     }
 
@@ -64,7 +57,7 @@ public class VentanaDivisas extends javax.swing.JFrame {
 
         panel.setLayout(new java.awt.GridBagLayout());
 
-        etiquetaDivisa1.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        etiquetaDivisa1.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
         etiquetaDivisa1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         etiquetaDivisa1.setText("$");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -73,7 +66,7 @@ public class VentanaDivisas extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.weighty = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(15, 15, 0, 5);
+        gridBagConstraints.insets = new java.awt.Insets(15, 15, 0, 10);
         panel.add(etiquetaDivisa1, gridBagConstraints);
 
         etiquetaCambio1.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
@@ -89,7 +82,12 @@ public class VentanaDivisas extends javax.swing.JFrame {
         panel.add(etiquetaCambio1, gridBagConstraints);
 
         comboDivisas1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        comboDivisas1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboDivisas1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estados Unidos - Dólar", "Argentina - Peso", "Europa - Euro" }));
+        comboDivisas1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboDivisas1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -100,7 +98,7 @@ public class VentanaDivisas extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 10);
         panel.add(comboDivisas1, gridBagConstraints);
 
-        etiquetaDivisa2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        etiquetaDivisa2.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
         etiquetaDivisa2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         etiquetaDivisa2.setText("$");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -109,7 +107,7 @@ public class VentanaDivisas extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.weighty = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(15, 15, 0, 5);
+        gridBagConstraints.insets = new java.awt.Insets(15, 15, 0, 10);
         panel.add(etiquetaDivisa2, gridBagConstraints);
 
         etiquetaCambio2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
@@ -125,7 +123,12 @@ public class VentanaDivisas extends javax.swing.JFrame {
         panel.add(etiquetaCambio2, gridBagConstraints);
 
         comboDivisas2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        comboDivisas2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboDivisas2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estados Unidos - Dólar", "Argentina - Peso", "Europa - Euro" }));
+        comboDivisas2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboDivisas2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -160,6 +163,11 @@ public class VentanaDivisas extends javax.swing.JFrame {
 
         boton7.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         boton7.setText("7");
+        boton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton7ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
@@ -170,6 +178,11 @@ public class VentanaDivisas extends javax.swing.JFrame {
 
         boton8.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         boton8.setText("8");
+        boton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton8ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
@@ -180,6 +193,11 @@ public class VentanaDivisas extends javax.swing.JFrame {
 
         boton9.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         boton9.setText("9");
+        boton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton9ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
@@ -190,6 +208,11 @@ public class VentanaDivisas extends javax.swing.JFrame {
 
         boton4.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         boton4.setText("4");
+        boton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton4ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
@@ -200,6 +223,11 @@ public class VentanaDivisas extends javax.swing.JFrame {
 
         boton5.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         boton5.setText("5");
+        boton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton5ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
@@ -210,6 +238,11 @@ public class VentanaDivisas extends javax.swing.JFrame {
 
         boton6.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         boton6.setText("6");
+        boton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton6ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
@@ -220,6 +253,11 @@ public class VentanaDivisas extends javax.swing.JFrame {
 
         boton1.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         boton1.setText("1");
+        boton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -230,6 +268,11 @@ public class VentanaDivisas extends javax.swing.JFrame {
 
         boton2.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         boton2.setText("2");
+        boton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
@@ -240,6 +283,11 @@ public class VentanaDivisas extends javax.swing.JFrame {
 
         boton3.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         boton3.setText("3");
+        boton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton3ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 7;
@@ -250,6 +298,11 @@ public class VentanaDivisas extends javax.swing.JFrame {
 
         boton0.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         boton0.setText("0");
+        boton0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton0ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 8;
@@ -321,9 +374,85 @@ public class VentanaDivisas extends javax.swing.JFrame {
     private void calculadoraEstandarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculadoraEstandarActionPerformed
         VentanaCalculadora calculadora = new VentanaCalculadora();
         calculadora.setVisible(true);
-        
+
         dispose();
     }//GEN-LAST:event_calculadoraEstandarActionPerformed
+
+    private void comboDivisas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboDivisas1ActionPerformed
+        divisa1 = (String) comboDivisas1.getSelectedItem();
+
+        if (divisa1.equals("Estados Unidos - Dólar")) {
+            etiquetaDivisa1.setText("$");
+        } else if (divisa1.equals("Argentina - Peso")) {
+            etiquetaDivisa1.setText("AR$");
+        } else if (divisa1.equals("Europa - Euro")) {
+            etiquetaDivisa1.setText("€");
+        }
+    }//GEN-LAST:event_comboDivisas1ActionPerformed
+
+    private void comboDivisas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboDivisas2ActionPerformed
+        divisa2 = (String) comboDivisas2.getSelectedItem();
+
+        if (divisa2.equals("Estados Unidos - Dólar")) {
+            etiquetaDivisa2.setText("$");
+        } else if (divisa2.equals("Argentina - Peso")) {
+            etiquetaDivisa2.setText("AR$");
+        } else if (divisa2.equals("Europa - Euro")) {
+            etiquetaDivisa2.setText("€");
+        }
+    }//GEN-LAST:event_comboDivisas2ActionPerformed
+
+    private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
+        cantidad += "1";
+        etiquetaCambio1.setText(cantidad);
+    }//GEN-LAST:event_boton1ActionPerformed
+
+    private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
+        cantidad += "2";
+        etiquetaCambio1.setText(cantidad);
+    }//GEN-LAST:event_boton2ActionPerformed
+
+    private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
+        cantidad += "3";
+        etiquetaCambio1.setText(cantidad);
+    }//GEN-LAST:event_boton3ActionPerformed
+
+    private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
+        cantidad += "4";
+        etiquetaCambio1.setText(cantidad);
+    }//GEN-LAST:event_boton4ActionPerformed
+
+    private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
+        cantidad += "5";
+        etiquetaCambio1.setText(cantidad);
+    }//GEN-LAST:event_boton5ActionPerformed
+
+    private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
+        cantidad += "6";
+        etiquetaCambio1.setText(cantidad);
+    }//GEN-LAST:event_boton6ActionPerformed
+
+    private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
+        cantidad += "7";
+        etiquetaCambio1.setText(cantidad);
+    }//GEN-LAST:event_boton7ActionPerformed
+
+    private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
+        cantidad += "8";
+        etiquetaCambio1.setText(cantidad);
+    }//GEN-LAST:event_boton8ActionPerformed
+
+    private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
+        cantidad += "9";
+        etiquetaCambio1.setText(cantidad);
+    }//GEN-LAST:event_boton9ActionPerformed
+
+    private void boton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton0ActionPerformed
+        if(cantidad != "") {
+            cantidad+= "0";
+            etiquetaCambio1.setText(cantidad);
+        }
+    }//GEN-LAST:event_boton0ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -351,17 +480,17 @@ public class VentanaDivisas extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(VentanaDivisas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
+
         try {
             UIManager.setLookAndFeel("com.jtattoo.plaf.texture.TextureLookAndFeel");
         } catch (ClassNotFoundException ex) {
-           // Logger.getLogger(VentanaCalculadora.class.getName()).log(Level.SEVERE, null, ex);
+            // Logger.getLogger(VentanaCalculadora.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-           // Logger.getLogger(VentanaCalculadora.class.getName()).log(Level.SEVERE, null, ex);
+            // Logger.getLogger(VentanaCalculadora.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-           // Logger.getLogger(VentanaCalculadora.class.getName()).log(Level.SEVERE, null, ex);
+            // Logger.getLogger(VentanaCalculadora.class.getName()).log(Level.SEVERE, null, ex);
         } catch (UnsupportedLookAndFeelException ex) {
-           // Logger.getLogger(VentanaCalculadora.class.getName()).log(Level.SEVERE, null, ex);
+            // Logger.getLogger(VentanaCalculadora.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         /* Create and display the form */
